@@ -5,12 +5,6 @@ def sign_in_and_play
   click_button 'Submit'
 end
 
-def super_attack
-  19.times do click_button 'Attack'
-  click_button 'OK'
-  end
-end
-
 def attack_and_confirm
   click_button 'Attack'
   click_button 'OK'
