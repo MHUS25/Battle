@@ -1,13 +1,15 @@
+<div style="text-align:center; font-size:30px; font-family: Arial">
 <%= @game.player_1.name %> vs. <%= @game.player_2.name %>
 <br>
 <%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP,&nbsp;
 
 <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP
 </br>
-
+<div style="font-weight: bold;">
 <%= @game.current_turn.name %>'s turn
-
+</div>
 
 <form action="/attack">
   <input type="submit" value="Attack">
 </form>
+</div>
