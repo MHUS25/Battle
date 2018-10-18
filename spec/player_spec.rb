@@ -24,9 +24,29 @@ describe Player do
   end
 
   describe '#receive_damage' do
-    it 'reduces the player hit points' do
+
+    it 'sometimes does not reduce hit points' do
+      allow(jill).to receive(:rand_points).and_return(0)
+      jill.receive_damage
+      expect { jill.receive_damage }.to change { jill.hit_points }.by(0)
+    end
+
+    it 'sometimes reduces hit points by 10' do
+      allow(jill).to receive(:rand_points).and_return(10)
+      jill.receive_damage
       expect { jill.receive_damage }.to change { jill.hit_points }.by(-10)
     end
-  end
 
+    it 'sometimes reduces hit points by 20' do
+      allow(jill).to receive(:rand_points).and_return(20)
+      jill.receive_damage
+      expect { jill.receive_damage }.to change { jill.hit_points }.by(-20)
+    end
+
+    it 'sometimes reduces hit points by 50' do
+      allow(jill).to receive(:rand_points).and_return(50)
+      jill.receive_damage
+      expect { jill.receive_damage }.to change { jill.hit_points }.by(-50)
+    end
+  end
 end

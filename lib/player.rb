@@ -13,6 +13,12 @@ class Player
   end
 
   def receive_damage
-    @hit_points -= 10
+    @hit_points -= rand_points
+  end
+
+  private
+
+  def rand_points
+    [0, 10, 20, 20, 20, 50].sample
   end
 end
