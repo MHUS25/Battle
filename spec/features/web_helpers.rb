@@ -4,3 +4,9 @@ def sign_in_and_play
   fill_in :player_2_name, with: 'Jack'
   click_button 'Submit'
 end
+
+def super_attack
+  19.times do click_button 'Attack'
+  click_button 'OK'
+  end
+end
