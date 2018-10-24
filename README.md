@@ -72,12 +72,12 @@ I want all Attacks to deal a random amount of damage
 ## Approach
 * 2 Classes: Player & Game 
 * 3 Views: /index, /play, /attack & /game_over
-* Fully test drove app using Spec & Capybara
+* Fully test driven app using Spec & Capybara
 * Aimed to use the MVC pattern to improve the maintainability of the app
 
 ## Getting started
 
-1. clone repo to your local machine `git clone https://github.com/MHUS25/Battle.gitt`
+1. clone repo to your local machine `git clone https://github.com/MHUS25/Battle.git`
 2. Run the command `gem install bundle` (if you don't have bundle already)
 3. When the installation completes, `run bundle`
 
